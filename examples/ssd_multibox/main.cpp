@@ -172,7 +172,7 @@ bool RunConfiguration(const std::string& config_file, uint32_t num_devices,
     std::string image_file;
     if (is_camera_input)
     {
-        cap = VideoCapture(1);  // cap = VideoCapture("test.mp4");
+        cap = VideoCapture(-1);  // cap = VideoCapture("test.mp4");
         if (! cap.isOpened())
         {
             std::cerr << "Cannot open camera input." << std::endl;
