@@ -1,0 +1,11 @@
+[Unit]
+Description=TIDL Demo
+After=graphical.target
+
+[Service]
+ExecStart=/var/lib/cloud9/tidl-api/examples/classification/run_camera.sh
+Type=forking
+PIDFile=/var/run/tidl-demo.pid
+
+[Install]
+WantedBy=graphical.target
