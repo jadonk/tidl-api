@@ -1,6 +1,7 @@
 [Unit]
 Description=TIDL Demo
 After=graphical.target
+Requires=graphical.target
 
 [Service]
 ExecStart=/var/lib/cloud9/tidl-api/examples/classification/run_camera.sh
