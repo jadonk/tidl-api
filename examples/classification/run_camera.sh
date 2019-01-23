@@ -12,8 +12,8 @@ GEDIT_PID=$!
 TIDL_PID=$!
 echo $TIDL_PID > /var/run/tidl-demo.pid
 sleep 5
-wmctrl -r "Imagenet_EVEx2_DSPx2" -e 0,100,100,-1,-1
-wmctrl -r "Classlist" -e 0,650,100,-1,-1
-wmctrl -r "TIDL SW Stack" -e 0,650,300,-1,-1
+wmctrl -r "Imagenet_EVEx2_DSPx2" -e 0,0,0,-1,-1
+wmctrl -r "Classlist" -e 0,500,0,-1,-1
+wmctrl -r "TIDL SW Stack" -e 0,475,200,-1,-1
 #wmctrl -r "Untitled Document 1 - gedit" -b add,hidden
 kill $GEDIT_PID
