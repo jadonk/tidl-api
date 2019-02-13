@@ -13,10 +13,12 @@ echo 0 > /sys/devices/system/cpu/cpu1/online
 echo oneshot > /sys/class/leds/beaglebone:green:usr4/trigger
 echo 0 > /sys/class/leds/beaglebone:green:usr4/delay_off
 while true; do
-	echo "(`cat /sys/class/thermal/thermal_zone0/temp`-30000)/75" | bc | tee /sys/class/leds/beaglebone:green:usr4/delay_on
+	echo "(`cat /sys/class/thermal/thermal_zone0/temp`-30000)/75" | bc > /sys/class/leds/beaglebone:green:usr4/delay_on
 	echo 1 > /sys/class/leds/beaglebone:green:usr4/shot
 	sleep 1
 done &
+THERMAL_LED_PID=$!
+echo $TIDL_PID > /var/run/thermal-led.pid
 ./tidl_classification -g 1 -d 2 -l ./imagenet.txt -s ./classlist.txt -i 0 -c ./stream_config_j11_v2.txt 1> /tmp/tidl.log 2> /tmp/tidl-err.log &
 TIDL_PID=$!
 echo $TIDL_PID > /var/run/tidl-demo.pid
