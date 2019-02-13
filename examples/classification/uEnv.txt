@@ -4,7 +4,7 @@ uname_r=4.14.94-ti-r93
 #uuid=
 dtb=am57xx-hamster.dtb
 #dtb=embest-AM572x-BB-AI.dtb
-cmdline=coherent_pool=1M net.ifnames=0 video=HDMI-A-1:1024x768@60e
+cmdline=coherent_pool=1M net.ifnames=0 video=HDMI-A-1:1280x1024@60e
 
 #In the event of edid real failures, uncomment this next line:
 #cmdline=coherent_pool=1M net.ifnames=0 quiet video=HDMI-A-1:1024x768@60e

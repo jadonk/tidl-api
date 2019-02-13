@@ -21,11 +21,14 @@ cd /usr/share/ti/tidl
 ln -s /home/debian/tidl-api/examples
 
 sudo cp /home/debian/tidl-api/examples/classification/tidl-demo.* /etc/systemd/systemd
+sudo cp /home/debian/tidl-api/examples/classification/thermal-led.service /etc/systemd/systemd
 sudo systemctl enable tidl-demo.timer
-sudo systemctl enable tidl-demo.service
+sudo systemctl enable thermal-led.service
 
 sudo shutdown -r now
 ```
+
+Also, check out the uEnv.txt in the local directory.
 
 #Various use cases:
 #
