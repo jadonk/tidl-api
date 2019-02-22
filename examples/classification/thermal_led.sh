@@ -5,8 +5,10 @@ if [[ $EUID -ne 0 ]]; then
 fi
 export DISPLAY=:0
 export XAUTHORITY=/home/debian/.Xauthority
-cpufreq-set -f 1G
-echo 0 > /sys/devices/system/cpu/cpu1/online
+#cpufreq-set -f 1G
+cpufreq-set -g ondemand
+#echo 0 > /sys/devices/system/cpu/cpu1/online
+echo 1 > /sys/devices/system/cpu/cpu1/online
 echo oneshot > /sys/class/leds/beaglebone:green:usr4/trigger
 echo 1 > /sys/class/leds/beaglebone:green:usr4/delay_off
 while true; do
