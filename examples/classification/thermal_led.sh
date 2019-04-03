@@ -14,5 +14,5 @@ echo 1 > /sys/class/leds/beaglebone:green:usr4/delay_off
 while true; do
 	echo "(`cat /sys/class/thermal/thermal_zone0/temp`-15000)/75" | bc > /sys/class/leds/beaglebone:green:usr4/delay_on
 	echo 1 > /sys/class/leds/beaglebone:green:usr4/shot
-	osd_cat /sys/class/thermal/thermal_zone0/temp -p bottom -d 1
+	osd_cat /sys/class/thermal/thermal_zone0/temp -p bottom -d 1 &> /dev/null
 done
