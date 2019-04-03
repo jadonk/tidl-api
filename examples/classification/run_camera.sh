@@ -6,7 +6,7 @@ fi
 cd $(dirname $0)
 export DISPLAY=:0
 export XAUTHORITY=/home/debian/.Xauthority
-xrandr --output HDMI1 --mode 1024x768
+#xrandr --output HDMI1 --mode 1024x768
 gedit &
 GEDIT_PID=$!
 ./tidl_classification -g 1 -d 2 -e 2 -l ./imagenet.txt -s ./classlist.txt -i 0 -c ./stream_config_j11_v2.txt 1> /tmp/tidl.log 2> /tmp/tidl-err.log &
