@@ -1,0 +1,10 @@
+[Unit]
+Description=Thermal LED
+
+[Service]
+ExecStart=/home/debian/tidl-api/examples/classification/thermal_led.sh
+#Type=forking
+#PIDFile=/var/run/thermal-led.pid
+
+[Install]
+WantedBy=multi-user.target

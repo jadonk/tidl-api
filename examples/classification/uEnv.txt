@@ -1,0 +1,17 @@
+#Docs: http://elinux.org/Beagleboard:U-boot_partitioning_layout_2.0
+
+uname_r=4.14.94-ti-r93
+#uuid=
+dtb=am57xx-hamster.dtb
+#dtb=embest-AM572x-BB-AI.dtb
+cmdline=coherent_pool=1M net.ifnames=0 video=HDMI-A-1:800x600@60e
+
+#In the event of edid real failures, uncomment this next line:
+#cmdline=coherent_pool=1M net.ifnames=0 quiet video=HDMI-A-1:1024x768@60e
+
+#Use an overlayfs on top of a read-only root filesystem:
+#cmdline=coherent_pool=1M net.ifnames=0 quiet overlayroot=tmpfs
+
+##enable x15: eMMC Flasher:
+##make sure, these tools are installed: dosfstools rsync
+#cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3-no-eeprom.sh

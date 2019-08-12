@@ -1,0 +1,9 @@
+[Unit]
+Description=TIDL Demo Timer
+
+[Timer]
+OnBootSec=30s
+Unit=tidl-demo.service
+
+[Install]
+WantedBy=graphical.target

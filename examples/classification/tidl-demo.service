@@ -1,0 +1,12 @@
+[Unit]
+Description=TIDL Demo
+After=graphical.target
+Requires=graphical.target
+
+[Service]
+ExecStart=/home/debian/tidl-api/examples/classification/run_camera.sh
+Type=forking
+PIDFile=/var/run/tidl-demo.pid
+
+[Install]
+WantedBy=graphical.target
